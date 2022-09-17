@@ -1,6 +1,6 @@
 {
   "name": "@blueromans/react-native-meteor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Full Meteor Client for React Native",
   "main": "dist/Meteor.js",
   "scripts": {
