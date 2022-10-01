@@ -50,10 +50,8 @@ module.exports = {
     },
     call,
     disconnect () {
-        if (Data.ddp) {
-            Data.ddp.disconnect();
-            Data.ddp = null;
-        }
+        Data.ddp?.disconnect();
+        Data.ddp = null;
         if (unsubscribe) {
             unsubscribe();
             unsubscribe = null;
@@ -156,10 +154,12 @@ module.exports = {
 
             console.info('Disconnected from DDP server.');
 
-            if (!Data.ddp.autoReconnect) return;
+            if (Data && Data.ddp && !Data?.ddp?.autoReconnect) return;
 
             if (!lastDisconnect || new Date() - lastDisconnect > 3000) {
-                Data.ddp.connect();
+                if (Data && Data.ddp) {
+                    Data.ddp.connect();
+                }
             }
 
             lastDisconnect = new Date();
