@@ -17,8 +17,6 @@ import ReactiveDict from './ReactiveDict';
 import User from './user/User';
 import Accounts from './user/Accounts';
 
-let unsubscribe;
-
 module.exports = {
     configureOptionalDeps,
     Accounts,
@@ -51,11 +49,6 @@ module.exports = {
     call,
     disconnect () {
         Data.ddp?.disconnect();
-        Data.ddp = null;
-        if (unsubscribe) {
-            unsubscribe();
-            unsubscribe = null;
-        }
     },
     _get (obj/* , arguments */) {
         for (let i = 1; i < arguments.length; i++) {
