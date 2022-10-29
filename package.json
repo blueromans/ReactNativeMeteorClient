@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blueromans/react-native-meteor.git"
+    "url": "git+https://github.com/blueromans/ReactNativeMeteorClient.git"
   },
   "keywords": [
     "ddp",
@@ -25,9 +25,9 @@
   "author": "Yaşar ÖZYURT",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blueromans/react-native-meteor/issues"
+    "url": "https://github.com/blueromans/ReactNativeMeteorClient/issues"
   },
-  "homepage": "https://github.com/blueromans/react-native-meteor#readme",
+  "homepage": "https://github.com/blueromans/ReactNativeMeteorClient#readme",
   "dependencies": {
     "base-64": "^0.1.0",
     "crypto-js": "^3.1.6",
